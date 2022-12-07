@@ -1,7 +1,11 @@
 package edu.global.shopping.command;
 
 public enum CommandList {
-    EXAMPLE("/member_list.do", new ExampleCommand(), "member_list.jsp");
+    MEMBER_INSERT("/member_insert.do", new MemberInsertCommand(), "member_write_view.jsp"),
+    MEMBER_LIST("/member_list.do", new MemberListCommand(), "member_list.jsp"),
+    MEMBER_SALE("/member_sail.do", new MemberSailCommand(), "member_sail.jsp"),
+    MEMBER_DETAIL("/member_detail.do", new MemberDetailCommand(), "member_detail.jsp"),
+    MEMBER_UPDATE("/member_update.do", new MemberUpdateCommand(), "member_detail.jsp");
 
     private final String com;
     private final Command command;
