@@ -108,7 +108,7 @@
                     회원번호(자동발생)
                 </th>
                 <td>
-                    <input type="text" size="15">
+                    <input type="text" size="15" value="${member.customerNo}">
                 </td>
             </tr>
             <tr>
@@ -116,44 +116,44 @@
                     회원성명
                 </th>
                 <td>
-                    <input type="text" size="15" name="CUSTNAME">
+                    <input type="text" size="15" value="${member.customerName}">
                 </td>
             </tr>
             <tr>
                 <th>회원전화</th>
                 <td>
-                    <input type="text" size="15" name="PHONE">
+                    <input type="text" size="15" value="${member.phone}">
                 </td>
             </tr>
             <tr>
                 <th>회원주소</th>
                 <td>
-                    <input type="text" size="30" name="ADDRESS">
+                    <input type="text" size="30" value="${member.address}">
                 </td>
             </tr>
             <tr>
                 <th>가입일자</th>
                 <td>
-                    <input type="text" size="15" name="JOINDATE">
+                    <input type="text" size="15" value="${member.joinDate}">
                 </td>
             </tr>
             <tr>
                 <th>고객등급[A:VIP,B:일반,C:직원]</th>
                 <td>
-                    <input type="text" size="15" name="GRADE">
+                    <input type="text" size="15" value="${member.grade}">
                 </td>
             </tr>
             <tr>
                 <th>도시코드</th>
                 <td>
-                    <input type="text" size="15" name="CITY">
+                    <input type="text" size="15" value="${member.city}">
                 </td>
             </tr>
 
             <tr align="center">
                 <td colspan="2">
                     <input type="submit" value="수정">
-                    <input type="submit" value="조회">
+                    <a href="member_list.do"> <input type="button" value="조회"></a>
                 </td>
             </tr>
             </tbody>

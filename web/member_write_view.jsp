@@ -92,7 +92,7 @@
 </nav>
 <section>
     <h3 align="center">홈쇼핑 회원 등록</h3>
-    <form action="member_insert.do" method="post">
+    <form action="/member_insert.do" method="post">
         <table width="40%" border="solid black 1px">
             <tbody>
             <tr>
@@ -145,7 +145,7 @@
                 <td colspan="2">
                     <input type="submit" value="등록">
                     &nbsp;&nbsp;
-                    <input type="bo" value="조회">
+                    <a href="member_list.do"> <input type="button" value="조회"></a>
                 </td>
             </tr>
             </tbody>

@@ -62,7 +62,9 @@ public class CommonDao {
             getConnection(query);
             setParameter(preparedStatement, params);
             resultSet = preparedStatement.executeQuery();
-            dto = convertableFromResultSet.convertToOneRecord(resultSet);
+            if (resultSet.next()) {
+                dto = convertableFromResultSet.convertToOneRecord(resultSet);
+            }
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {

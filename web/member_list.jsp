@@ -12,47 +12,71 @@
     <meta charset="UTF-8">
     <title>회원목록 조회/수정</title>
     <style type="text/css">
-        table{
+        table {
             text-align: center;
             font-size: 15px;
             margin-left: 25%;
             border-collapse: collapse;
         }
-        td{
+
+        td {
             padding: 5px;
         }
-        th{
+
+        th {
             padding: 5px;
         }
-        a:link{
+
+        a:link {
             color: white;
             text-decoration: none;
         }
-        a:visited{
+
+        a:visited {
             color: white;
             text-decoration: none;
         }
-        html.body{
-            margin: 0; padding: 0;
+
+        html.body {
+            margin: 0;
+            padding: 0;
         }
-        header{
-            width: 100%; height: 90px; background: #3557D5;
-            text-align: center;font-size: 25px; color: white;
+
+        header {
+            width: 100%;
+            height: 90px;
+            background: #3557D5;
+            text-align: center;
+            font-size: 25px;
+            color: white;
             padding-top: 50px;
         }
-        nav{
-            width: 100%; height: 30px; background: #8F8CE7;
-            color: white;font-size: 12px;
+
+        nav {
+            width: 100%;
+            height: 30px;
+            background: #8F8CE7;
+            color: white;
+            font-size: 12px;
             padding-top: 10px;
         }
-        section{
-            width: 100%; height: 350px; background: lightgray;
-            text-align: center;font-size: 20px;
+
+        section {
+            width: 100%;
+            height: 350px;
+            background: lightgray;
+            text-align: center;
+            font-size: 20px;
             padding-top: 20px;
         }
-        footer{
-            width: 100%; height: 30px; background: #3665B5;
-            text-align: center;color: white;font-size: 12px;
+
+        footer {
+            width: 100%;
+            height: 30px;
+            background: #3665B5;
+            text-align: center;
+            color: white;
+            font-size: 12px;
             padding-top: 10px;
         }
     </style>
@@ -81,7 +105,7 @@
         <tbody>
         <c:forEach var="dto" items="${list}">
             <tr>
-                <td><a href="member_update.do">${dto.customerNo}</a></td>
+                <td><a href="member_update.do?custno=${dto.customerNo}">${dto.customerNo}</a></td>
                 <td>${dto.customerName}</td>
                 <td>${dto.phone}</td>
                 <td>${dto.address}</td>
