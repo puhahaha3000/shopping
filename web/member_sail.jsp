@@ -1,17 +1,26 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: USER
-  Date: 2022-12-06
-  Time: 오후 6:13
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Insert title here</title>
+    <title>회원 매출 조회</title>
     <style type="text/css">
+        table {
+            text-align: center;
+            font-size: 15px;
+            margin-left: 30%;
+            border-collapse: collapse;
+        }
+
+        td {
+            padding: 5px;
+        }
+
+        th {
+            padding: 5px;
+        }
+
         a:link {
             color: white;
             text-decoration: none;
@@ -50,6 +59,7 @@
             width: 100%;
             height: 350px;
             background: lightgray;
+            text-align: center;
             font-size: 20px;
             padding-top: 20px;
         }
@@ -63,17 +73,6 @@
             font-size: 12px;
             padding-top: 10px;
         }
-
-        p {
-            text-align: left;
-            font-size: 15px;
-            padding-left: 20px;
-        }
-
-        ul {
-            font-size: 15px;
-            list-style: decimal;
-        }
     </style>
 </head>
 <body>
@@ -86,21 +85,25 @@
     <a href="index.jsp">홈으로</a>
 </nav>
 <section>
-    <h3 align="center">쇼핑몰 회원관리 프로그램</h3>
-    <p>
-        쇼핑몰 회원정보와 회원매출정보 데이터베이스를 구축하고 회원관리 프로그램을 작성하는 프로그램이다.
-    </p>
-    <p>
-        프로그램 작성 순서
-    <ul>
-        <li>회원정보 테이블을 생성한다.</li>
-        <li>매출정보 테이블을 생성한다.</li>
-        <li>회원정보, 매출정보 테이블에 제시된 문제지의 참조데이터를 추가 생성한다.</li>
-        <li>회원정보 입력 화면프로그램을 작성한다.</li>
-        <li>회원정보 조회 프로그램을 작성한다.</li>
-        <li>회원매출정보 조회 프로그램을 작성한다.</li>
-    </ul>
-    </p>
+    <h3>회원매출조회</h3>
+    <table width="40%" height="50" border="solid black 1px">
+        <thead>
+        <th>회원번호</th>
+        <th>회원성명</th>
+        <th>고객등급</th>
+        <th>매출</th>
+        </thead>
+        <tbody>
+        <c:forEach var="dto" items="${list}">
+            <tr>
+                <td>${dto.memberNo}</td>
+                <td>${dto.memberName}</td>
+                <td>${dto.grade}</td>
+                <td>${dto.sale}</td>
+            </tr>
+        </c:forEach>
+        </tbody>
+    </table>
 </section>
 <footer>HRDKOREA Copyright@2015 Allrights reserved.Human Resources Development Service od Korea</footer>
 </body>
