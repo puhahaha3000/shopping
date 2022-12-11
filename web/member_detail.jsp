@@ -88,6 +88,11 @@
             padding-top: 10px;
         }
     </style>
+    <script>
+        function checkUpdate(){
+            alert("회원정보가 수정되었습니다.")
+        }
+    </script>
 </head>
 <body>
 <header>쇼핑몰 회원관리 ver 1.0</header>
@@ -152,7 +157,7 @@
 
             <tr align="center">
                 <td colspan="2">
-                    <input type="submit" value="수정">
+                    <input type="submit" value="수정" onclick="checkUpdate()">
                     <a href="member_list.do"> <input type="button" value="조회"></a>
                 </td>
             </tr>
@@ -160,5 +165,6 @@
         </table>
     </form>
 </section>
+<footer>HRDKOREA Copyright@2015 Allrights reserved.Human Resources Development Service od Korea</footer>
 </body>
 </html>

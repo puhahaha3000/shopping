@@ -1,11 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%--
-  Created by IntelliJ IDEA.
-  User: KIMHYOJUN
-  Date: 2022-12-09
-  Time: 오전 11:45
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -62,8 +56,8 @@
         }
 
         section {
-            width: 100%;
-            height: 350px;
+            width: auto;
+            height: 90%;
             background: lightgray;
             text-align: center;
             font-size: 20px;
@@ -78,6 +72,8 @@
             color: white;
             font-size: 12px;
             padding-top: 10px;
+            position: relative;
+            transform: translateY(-100%);
         }
     </style>
 </head>
